@@ -8,6 +8,8 @@
 
 package lab1;
 
+import javax.swing.text.StyledEditorKit.ForegroundAction;
+
 /**
  *
  * @author root
@@ -39,6 +41,12 @@ public class Main {
     
     public static void main(String[] args) {
         new Main();
+
+        // 1.4
+        System.out.println("Parameters: ");
+        for(int i = 0; i < args.length; i++) {
+            System.out.println(args[i]);
+        }
     }
 
 }
