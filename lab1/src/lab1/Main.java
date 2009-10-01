@@ -53,14 +53,41 @@ public class Main {
         }
 
         // 1.6
+        /*
         try {
             FileOutputStream f = new FileOutputStream("C:/" + args[0]);
             f.close();
         } catch (Exception e) {
             System.out.println("Problem with FileOutputStream");
             System.out.println(e.getMessage());
+        }*/
+
+        // 1.7
+        // Калькулятор, считаем, что параметры всегда верны, чтобы не усложнять
+        Float val1 = new Float(args[0]);
+        String operation = args[1];
+        Float val2 = new Float(args[2]);
+
+        System.out.println(args[0] + args[1] + args[2] + " = ");
+        if (operation.equals("+")) {
+            Float result = new Float(val1 + val2);
+            System.out.print(result);
+        } else if (operation.equals("-")) {
+            Float result = new Float(val1 - val2);
+            System.out.print(result);
+        } else if (operation.equals("x")) {
+            Float result = new Float(val1 * val2);
+            System.out.print(result);
+        } else if (operation.equals("/")) {
+            if (val2 != 0) {
+                Float result = new Float(val1 / val2);
+                System.out.print(result);
+            } else {
+                System.out.println("Нельзя делить на 0");
+            }
         }
 
+        System.out.println();
 
         new Main();
     }
