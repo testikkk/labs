@@ -52,7 +52,7 @@ public class Main {
             System.out.println(args[i]);
         }
 
-        // 1.5
+        // 1.6
         try {
             FileOutputStream f = new FileOutputStream("C:/" + args[0]);
             f.close();
