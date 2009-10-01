@@ -25,6 +25,12 @@ public class Main {
         java.util.ArrayList al = new java.util.ArrayList();
         al.add(new Integer(1));
         System.out.println("ArrayList size is " + al.size() + " element(s)");
+
+        // 1.3 (не то вроде... )
+        String nullString = null;
+        if ( nullString == null) {
+            System.out.println("Null");
+        }
     }
 
     private void privateMethod() {
