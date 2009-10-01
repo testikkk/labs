@@ -9,6 +9,7 @@
 package lab1;
 
 import javax.swing.text.StyledEditorKit.ForegroundAction;
+import java.io.*;
 
 /**
  *
@@ -33,20 +34,35 @@ public class Main {
         if ( nullString == null) {
             System.out.println("Null");
         }
+
+        convert();
     }
 
-    private void privateMethod() {
-        
+    private void convert() {
+        // 1.5
+        Integer ii = new Integer(1);
+        int i = ii.intValue();
+        ii = new Integer("123");
     }
     
     public static void main(String[] args) {
-        new Main();
-
         // 1.4
         System.out.println("Parameters: ");
         for(int i = 0; i < args.length; i++) {
             System.out.println(args[i]);
         }
+
+        // 1.5
+        try {
+            FileOutputStream f = new FileOutputStream("C:/" + args[0]);
+            f.close();
+        } catch (Exception e) {
+            System.out.println("Problem with FileOutputStream");
+            System.out.println(e.getMessage());
+        }
+
+
+        new Main();
     }
 
 }
